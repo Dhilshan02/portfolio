@@ -38,7 +38,7 @@ export const Experience: React.FC = () => {
                 <div
                   key={item.id}
                   className={`relative flex flex-col md:flex-row items-center ${
-                    isEven ? 'md:flex-row-reverse' : ''
+                    isEven ? '' : 'md:flex-row-reverse'
                   }`}
                 >
                   

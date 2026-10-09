@@ -73,15 +73,6 @@ export const Footer: React.FC = () => {
             >
               <InstagramIcon className="w-4 h-4" />
             </a>
-            <a
-              href={PERSONAL_INFO.tiktok}
-              target="_blank"
-              rel="noreferrer"
-              className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
-              title="TikTok"
-            >
-              <TiktokIcon className="w-4 h-4" />
-            </a>
             <button
               onClick={scrollToTop}
               className="p-2.5 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500 hover:text-slate-950 transition-all ml-1"

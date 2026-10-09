@@ -80,25 +80,11 @@ export const Contact: React.FC = () => {
       color: "text-pink-400 border-pink-500/30 bg-pink-950/60"
     },
     {
-      title: "TikTok",
-      value: "@mr.dhilshan_mhd",
-      href: PERSONAL_INFO.tiktok,
-      icon: TiktokIcon,
-      color: "text-teal-400 border-teal-500/30 bg-teal-950/60"
-    },
-    {
       title: "Photo Studio",
       value: PERSONAL_INFO.photoStudio,
       href: PERSONAL_INFO.facebook,
       icon: Camera,
       color: "text-amber-400 border-amber-500/30 bg-amber-950/60"
-    },
-    {
-      title: "Location",
-      value: PERSONAL_INFO.location,
-      href: "#",
-      icon: MapPin,
-      color: "text-emerald-400 border-emerald-500/30 bg-emerald-950/60"
     }
   ];
 
