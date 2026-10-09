@@ -163,17 +163,17 @@ export const TIMELINE: TimelineItem[] = [
   },
   {
     id: "idm-diploma",
-    period: "2023",
-    role: "IT & English Dual Diploma",
-    institution: "IDM Eastern Campus",
+    period: "2026",
+    role: "International Diploma in Quantity Surveying (Level 4)",
+    institution: "Metropolitan College (OTHM Qualifications)",
     location: "Sri Lanka",
-    description: "Completed intensive dual diploma program covering fundamentals of computer science, full-stack web development, and professional technical English communication.",
+    description: "Awarded the OTHM International Diploma in Quantity Surveying (EQF Level 5), achieving 120 credits (60 ECTS) with a PASS in all six units. Assessed in English.",
     achievements: [
-      "Graduated with Distinction in Web Development Fundamentals & Programming Logic",
-      "Developed introductory web portals using HTML5, CSS3, JavaScript, and MySQL",
-      "Mastered technical presentation & software documentation skills"
+      "Passed all 6 units: Surveying, Measurement I, Construction Technology & Drawings, Service Engineering Installation, Quantity Surveying Practice, Bidding Procedure",
+      "Achieved 120 total credits and 60 ECTS credits (Pass / Fail grading)",
+      "Qualified for the award on 28 September 2026; transcript issued 02 October 2026"
     ],
-    skills: ["Web Fundamentals", "Database Basics", "Technical Writing", "Client Communication"]
+    skills: ["Surveying", "Measurement", "Construction Technology", "Bidding Procedure"]
   },
   {
     id: "freelance-dev",

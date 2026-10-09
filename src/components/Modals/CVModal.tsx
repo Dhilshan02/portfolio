@@ -32,9 +32,9 @@ EDUCATION
   NSBM Green University, Homagama, Sri Lanka
   Key Modules: Enterprise Architecture, Web Development, Database Engineering, Software Design Patterns
 
-- IT & English Dual Diploma (2023)
-  IDM Eastern Campus, Sri Lanka
-  Graduated with Distinction in Full-Stack Web Development Fundamentals
+- International Diploma in Quantity Surveying, Level 4 (2026)
+  Metropolitan College (OTHM Qualifications), Sri Lanka
+  120 credits / 60 ECTS, PASS in all units (EQF Level 5)
 
 ==================================================
 TECHNICAL SKILLS
@@ -183,12 +183,12 @@ KEY PROJECTS
 
               <div className="p-4 rounded-xl bg-slate-900/50 border border-slate-800">
                 <div className="flex justify-between items-start font-heading font-bold text-white text-base">
-                  <span>IT & English Dual Diploma</span>
-                  <span className="font-mono text-xs text-purple-400 font-normal">2023</span>
+                  <span>International Diploma in Quantity Surveying (Level 4)</span>
+                  <span className="font-mono text-xs text-purple-400 font-normal">2026</span>
                 </div>
-                <p className="text-xs font-mono text-slate-400 mt-0.5">IDM Eastern Campus — Sri Lanka</p>
+                <p className="text-xs font-mono text-slate-400 mt-0.5">Metropolitan College (OTHM Qualifications) — Sri Lanka</p>
                 <p className="text-xs text-slate-300 mt-2">
-                  Awarded Distinction in Programming Fundamentals, Web Development Basics, and Business Communication.
+                  Achieved 120 credits (60 ECTS) with a PASS in all six units: Surveying, Measurement I, Construction Technology & Drawings, Service Engineering Installation, Quantity Surveying Practice, and Bidding Procedure.
                 </p>
               </div>
             </div>
