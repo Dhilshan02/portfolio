@@ -3,13 +3,11 @@ import { SKILLS } from '../data/portfolioData';
 import { Code2, Terminal, Cpu, Database, Server, Zap, Palette, FileCode2, Layout, Grid, Atom, Network, HardDrive, GitBranch, Send } from 'lucide-react';
 
 export const Skills: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState<string>('All');
+  const [activeCategory, setActiveCategory] = useState<string>('Languages');
 
-  const categories = ['All', 'Languages', 'Frontend', 'Backend', 'Databases & Tools'];
+  const categories = ['Languages', 'Frontend', 'Backend', 'Databases & Tools'];
 
-  const filteredSkills = activeCategory === 'All'
-    ? SKILLS
-    : SKILLS.filter(s => s.category === activeCategory);
+  const filteredSkills = SKILLS.filter(s => s.category === activeCategory);
 
   const getIcon = (iconName: string) => {
     switch (iconName) {
