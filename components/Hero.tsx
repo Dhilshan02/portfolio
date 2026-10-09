@@ -27,7 +27,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCV, onOpenDemo }) => {
             <div className="relative group w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
               
               {/* Outer Pulsing Glow Aura */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full opacity-30 blur-2xl group-hover:opacity-60 transition duration-1000"></div>
+              <div className="absolute -inset-4 bg-linear-to-r from-cyan-500 to-purple-600 rounded-full opacity-30 blur-2xl group-hover:opacity-60 transition duration-1000"></div>
 
               {/* High Tech Reticle Brackets */}
               <div className="absolute -top-3 -left-3 w-8 h-8 border-t-2 border-l-2 border-cyan-400"></div>
@@ -116,7 +116,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCV, onOpenDemo }) => {
 
             {/* Status Callout */}
             <div className="p-3 rounded-lg bg-cyan-950/30 border border-cyan-500/20 text-xs text-slate-300 font-mono flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+              <ShieldCheck className="w-4 h-4 text-cyan-400 shrink-0" />
               <span>{PERSONAL_INFO.statusText}</span>
             </div>
 
@@ -124,7 +124,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCV, onOpenDemo }) => {
             <div className="pt-2 flex flex-wrap gap-4 items-center">
               <button
                 onClick={onOpenCV}
-                className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 via-teal-400 to-cyan-400 text-slate-950 font-bold text-sm font-mono uppercase tracking-wider hover:shadow-[0_0_30px_rgba(0,240,255,0.6)] hover:scale-[1.02] transition-all flex items-center gap-2"
+                className="px-6 py-3.5 rounded-xl bg-linear-to-r from-cyan-500 via-teal-400 to-cyan-400 text-slate-950 font-bold text-sm font-mono uppercase tracking-wider hover:shadow-[0_0_30px_rgba(0,240,255,0.6)] hover:scale-[1.02] transition-all flex items-center gap-2"
               >
                 <FileText className="w-4 h-4" />
                 <span>Download CV</span>

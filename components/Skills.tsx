@@ -108,7 +108,7 @@ export const Skills: React.FC = () => {
                 <div className="mt-4 pt-3 border-t border-slate-800/60">
                   <div className="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-cyan-500 via-teal-400 to-blue-500 rounded-full transition-all duration-1000 group-hover:shadow-[0_0_10px_#00f0ff]"
+                      className="h-full bg-linear-to-r from-cyan-500 via-teal-400 to-blue-500 rounded-full transition-all duration-1000 group-hover:shadow-[0_0_10px_#00f0ff]"
                       style={{ width: `${skill.level}%` }}
                     />
                   </div>

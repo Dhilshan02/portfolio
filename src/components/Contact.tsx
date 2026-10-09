@@ -111,7 +111,7 @@ export const Contact: React.FC = () => {
                   href={item.href}
                   target={item.href.startsWith('http') ? '_blank' : '_self'}
                   rel="noreferrer"
-                  className="glass-panel glass-panel-hover p-4 rounded-xl border flex items-center gap-4 transition-all block group"
+                  className="glass-panel glass-panel-hover p-4 rounded-xl border flex items-center gap-4 transition-all group"
                 >
                   <div className={`p-3 rounded-xl border ${item.color} group-hover:scale-110 transition-transform`}>
                     <IconComponent className="w-5 h-5" />
@@ -149,7 +149,7 @@ export const Contact: React.FC = () => {
 
             {status === 'success' && (
               <div className="mb-6 p-4 rounded-xl bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-sm flex items-start gap-3 animate-in fade-in duration-300 font-mono">
-                <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
                   <p className="font-bold">Message Transmitted Successfully!</p>
                   <p className="text-xs text-emerald-400/80 mt-1">
@@ -161,7 +161,7 @@ export const Contact: React.FC = () => {
 
             {status === 'error' && (
               <div className="mb-6 p-4 rounded-xl bg-rose-950/80 border border-rose-500/40 text-rose-300 text-sm flex items-center gap-3 font-mono">
-                <AlertCircle className="w-5 h-5 text-rose-400 flex-shrink-0" />
+                <AlertCircle className="w-5 h-5 text-rose-400 shrink-0" />
                 <span>{errorMessage}</span>
               </div>
             )}
@@ -178,7 +178,7 @@ export const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="e.g. Sarah Connor"
-                    className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-700/80 text-white placeholder-slate-500 text-sm font-sans focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-700 text-white placeholder-slate-500 text-sm font-sans focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all"
                   />
                 </div>
 
@@ -192,7 +192,7 @@ export const Contact: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="e.g. sarah@techcorp.com"
-                    className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-700/80 text-white placeholder-slate-500 text-sm font-sans focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-700 text-white placeholder-slate-500 text-sm font-sans focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all"
                   />
                 </div>
               </div>
@@ -207,7 +207,7 @@ export const Contact: React.FC = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   placeholder="e.g. Software Engineering Internship Inquiry"
-                  className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-700/80 text-white placeholder-slate-500 text-sm font-sans focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all"
+                  className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-700 text-white placeholder-slate-500 text-sm font-sans focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all"
                 />
               </div>
 
@@ -221,14 +221,14 @@ export const Contact: React.FC = () => {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Write your message here..."
-                  className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-700/80 text-white placeholder-slate-500 text-sm font-sans focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-700 text-white placeholder-slate-500 text-sm font-sans focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all resize-none"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={status === 'sending'}
-                className="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-500 via-teal-400 to-cyan-400 text-slate-950 font-bold font-mono text-sm uppercase tracking-wider hover:shadow-[0_0_25px_rgba(0,240,255,0.5)] transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+                className="w-full py-4 rounded-xl bg-linear-to-r from-cyan-500 via-teal-400 to-cyan-400 text-slate-950 font-bold font-mono text-sm uppercase tracking-wider hover:shadow-[0_0_25px_rgba(0,240,255,0.5)] transition-all flex items-center justify-center gap-2 disabled:opacity-50"
               >
                 {status === 'sending' ? (
                   <>

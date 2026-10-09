@@ -28,7 +28,7 @@ export const Experience: React.FC = () => {
         <div className="mt-16 relative">
           
           {/* Central Line */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-500 via-teal-400 to-purple-600 transform -translate-x-1/2 shadow-[0_0_15px_#00f0ff]" />
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-linear-to-b from-cyan-500 via-teal-400 to-purple-600 transform -translate-x-1/2 shadow-[0_0_15px_#00f0ff]" />
 
           <div className="space-y-12">
             {TIMELINE.map((item, idx) => {
@@ -93,7 +93,7 @@ export const Experience: React.FC = () => {
                         <span className="text-xs font-mono text-slate-400 font-semibold uppercase">Highlights:</span>
                         {item.achievements.map((ach, i) => (
                           <div key={i} className="flex items-start gap-2 text-xs text-slate-300">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                            <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5" />
                             <span>{ach}</span>
                           </div>
                         ))}

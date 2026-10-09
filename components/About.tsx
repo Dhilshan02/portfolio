@@ -124,7 +124,7 @@ export const About: React.FC = () => {
                 >
                   <div>
                     <div className="flex items-center justify-between">
-                      <div className={`p-3 rounded-xl bg-gradient-to-r ${comp.color} text-slate-950 shadow-md`}>
+                      <div className={`p-3 rounded-xl bg-linear-to-r ${comp.color} text-slate-950 shadow-md`}>
                         <IconComp className="w-6 h-6" />
                       </div>
                     </div>

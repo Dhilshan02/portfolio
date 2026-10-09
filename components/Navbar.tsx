@@ -111,7 +111,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommandPalette, onOpenCV }
             {/* CV Download / View Trigger */}
             <button
               onClick={onOpenCV}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-bold text-xs font-mono uppercase tracking-wider hover:brightness-110 hover:shadow-[0_0_20px_rgba(0,240,255,0.5)] transition-all"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-linear-to-r from-cyan-500 to-blue-600 text-slate-950 font-bold text-xs font-mono uppercase tracking-wider hover:brightness-110 hover:shadow-[0_0_20px_rgba(0,240,255,0.5)] transition-all"
             >
               <FileText className="w-4 h-4" />
               <span>CV</span>
@@ -159,7 +159,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommandPalette, onOpenCV }
                 setMobileMenuOpen(false);
                 onOpenCV();
               }}
-              className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-bold text-sm font-mono uppercase tracking-wider"
+              className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-linear-to-r from-cyan-500 to-blue-600 text-slate-950 font-bold text-sm font-mono uppercase tracking-wider"
             >
               <FileText className="w-4 h-4" />
               <span>View & Download CV</span>

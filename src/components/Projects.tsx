@@ -73,7 +73,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onOpenCaseStudy, onOpenDemo 
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter contrast-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0d1321] via-transparent to-transparent opacity-80" />
+                  <div className="absolute inset-0 bg-linear-to-t from-[#0d1321] via-transparent to-transparent opacity-80" />
 
                   {/* Badge */}
                   {project.badge && (
