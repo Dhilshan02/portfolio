@@ -41,7 +41,7 @@ export const About: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-widest">
-            // 02. About & Philosophy
+            // About & Philosophy
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white font-heading tracking-tight">
             Turning Coursework Into <span className="text-cyan-400">Shipped Software.</span>
@@ -58,9 +58,6 @@ export const About: React.FC = () => {
               key={idx}
               className="glass-panel glass-panel-hover p-6 rounded-2xl border border-cyan-500/20 text-center relative overflow-hidden group"
             >
-              <div className="absolute -right-4 -bottom-4 text-7xl font-extrabold text-cyan-500/5 font-mono select-none group-hover:text-cyan-500/10 transition-colors">
-                0{idx + 1}
-              </div>
               <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-mono text-cyan-400 cyan-glow-text">
                 {stat.value}{stat.suffix}
               </div>
@@ -130,7 +127,6 @@ export const About: React.FC = () => {
                       <div className={`p-3 rounded-xl bg-gradient-to-r ${comp.color} text-slate-950 shadow-md`}>
                         <IconComp className="w-6 h-6" />
                       </div>
-                      <span className="text-xs font-mono text-slate-500">0{idx + 1}</span>
                     </div>
 
                     <h4 className="text-lg font-bold text-white mt-4 font-heading">

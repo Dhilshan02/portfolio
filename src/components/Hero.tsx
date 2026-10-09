@@ -20,7 +20,45 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCV, onOpenDemo }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* Left Hero Content (7 Cols) */}
+          {/* Left Hero Visual / Portrait (5 Cols) */}
+          <div className="lg:col-span-5 relative flex flex-col items-center justify-center">
+            
+            {/* Glowing Neon Ring Container around Portrait */}
+            <div className="relative group w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+              
+              {/* Outer Pulsing Glow Aura */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full opacity-30 blur-2xl group-hover:opacity-60 transition duration-1000"></div>
+
+              {/* High Tech Reticle Brackets */}
+              <div className="absolute -top-3 -left-3 w-8 h-8 border-t-2 border-l-2 border-cyan-400"></div>
+              <div className="absolute -top-3 -right-3 w-8 h-8 border-t-2 border-r-2 border-cyan-400"></div>
+              <div className="absolute -bottom-3 -left-3 w-8 h-8 border-b-2 border-l-2 border-cyan-400"></div>
+              <div className="absolute -bottom-3 -right-3 w-8 h-8 border-b-2 border-r-2 border-cyan-400"></div>
+
+              {/* Image Frame */}
+              <div className="relative w-full h-full rounded-full overflow-hidden neon-avatar-ring">
+                <img
+                  src={PERSONAL_INFO.portrait}
+                  alt={PERSONAL_INFO.name}
+                  className="w-full h-full object-cover rounded-full filter contrast-105 brightness-105 group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="scanline"></div>
+              </div>
+
+              {/* Floating Code Status Badge Card */}
+              <div className="absolute -bottom-4 -left-4 sm:bottom-2 sm:-left-6 glass-panel px-4 py-2.5 rounded-xl border border-cyan-500/30 flex items-center gap-3 shadow-xl">
+                <div className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></div>
+                <div className="text-left font-mono text-xs">
+                  <p className="text-slate-400">Status</p>
+                  <p className="text-cyan-300 font-semibold">Available for Internships</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* Right Hero Content (7 Cols) */}
           <div className="lg:col-span-7 space-y-6 text-left">
             
             {/* Eyebrow Badge */}
@@ -109,57 +147,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCV, onOpenDemo }) => {
                 <span>View Projects</span>
                 <ArrowDown className="w-4 h-4 text-cyan-400 animate-bounce" />
               </a>
-            </div>
-
-          </div>
-
-          {/* Right Hero Visual / Portrait (5 Cols) */}
-          <div className="lg:col-span-5 relative flex flex-col items-center justify-center">
-            
-            {/* Vertical Section Indicator */}
-            <div className="hidden lg:flex absolute -left-8 top-0 bottom-0 items-center">
-              <span className="font-mono text-xs text-cyan-500/60 rotate-90 tracking-widest uppercase">
-                01 // SECTION 05
-              </span>
-            </div>
-
-            {/* Glowing Neon Ring Container around Portrait */}
-            <div className="relative group w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
-              
-              {/* Outer Pulsing Glow Aura */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full opacity-30 blur-2xl group-hover:opacity-60 transition duration-1000"></div>
-
-              {/* High Tech Reticle Brackets */}
-              <div className="absolute -top-3 -left-3 w-8 h-8 border-t-2 border-l-2 border-cyan-400"></div>
-              <div className="absolute -top-3 -right-3 w-8 h-8 border-t-2 border-r-2 border-cyan-400"></div>
-              <div className="absolute -bottom-3 -left-3 w-8 h-8 border-b-2 border-l-2 border-cyan-400"></div>
-              <div className="absolute -bottom-3 -right-3 w-8 h-8 border-b-2 border-r-2 border-cyan-400"></div>
-
-              {/* Image Frame */}
-              <div className="relative w-full h-full rounded-full overflow-hidden neon-avatar-ring">
-                <img
-                  src={PERSONAL_INFO.portrait}
-                  alt={PERSONAL_INFO.name}
-                  className="w-full h-full object-cover rounded-full filter contrast-105 brightness-105 group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="scanline"></div>
-              </div>
-
-              {/* Floating Code Status Badge Card */}
-              <div className="absolute -bottom-4 -left-4 sm:bottom-2 sm:-left-6 glass-panel px-4 py-2.5 rounded-xl border border-cyan-500/30 flex items-center gap-3 shadow-xl">
-                <div className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></div>
-                <div className="text-left font-mono text-xs">
-                  <p className="text-slate-400">Status</p>
-                  <p className="text-cyan-300 font-semibold">Available for Internships</p>
-                </div>
-              </div>
-
-              {/* Floating Stack Badge */}
-              <div className="absolute -top-2 -right-4 glass-panel px-3.5 py-2 rounded-xl border border-purple-500/30 text-xs font-mono text-purple-300 flex items-center gap-2 shadow-xl">
-                <Terminal className="w-3.5 h-3.5 text-purple-400" />
-                <span>Spring Boot • React</span>
-              </div>
-
             </div>
 
           </div>

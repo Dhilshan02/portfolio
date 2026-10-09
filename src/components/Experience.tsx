@@ -14,7 +14,7 @@ export const Experience: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-mono uppercase tracking-widest">
-            // 05. Experience & Academic Background
+            // Experience & Academic Background
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white font-heading tracking-tight">
             Education & <span className="text-cyan-400">Timeline</span>

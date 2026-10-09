@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Search, FileText } from 'lucide-react';
+import dLogo from '../assets/d-logo.png';
 
 interface NavbarProps {
   onOpenCommandPalette: () => void;
@@ -59,8 +60,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommandPalette, onOpenCV }
             href="#home"
             className="flex items-center gap-2.5 group cursor-pointer"
           >
-            <div className="w-10 h-10 rounded-lg bg-cyan-950/60 border border-cyan-500/40 flex items-center justify-center font-mono font-bold text-cyan-400 group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_rgba(0,240,255,0.4)] transition-all">
-              <span className="text-xl text-cyan-400 font-extrabold font-mono">D</span>
+            <div className="w-10 h-10 rounded-xl overflow-hidden border border-cyan-500/40 group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_rgba(0,240,255,0.4)] transition-all">
+              <img src={dLogo} alt="D Logo" className="w-full h-full object-cover" />
             </div>
             <div className="flex flex-col">
               <span className="font-heading font-extrabold text-lg text-white tracking-wider group-hover:text-cyan-400 transition-colors flex items-center gap-1">
