@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Search, FileText } from 'lucide-react';
+import { Menu, X, Search, FileText, Palette } from 'lucide-react';
 import dLogo from '../assets/d-logo.png';
 
 interface NavbarProps {
@@ -11,6 +11,23 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommandPalette, onOpenCV }
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+
+  const [theme, setTheme] = useState<'cyber' | 'emerald'>(() => {
+    return (localStorage.getItem('portfolio-theme') as 'cyber' | 'emerald') || 'cyber';
+  });
+
+  useEffect(() => {
+    if (theme === 'emerald') {
+      document.documentElement.setAttribute('data-theme', 'emerald');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+    localStorage.setItem('portfolio-theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'cyber' ? 'emerald' : 'cyber'));
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -94,7 +111,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommandPalette, onOpenCV }
           </nav>
 
           {/* Right Action Controls */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-2.5">
+            {/* Theme Toggle Button */}
+            <button
+              onClick={toggleTheme}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-mono transition-all ${
+                theme === 'emerald'
+                  ? 'bg-[#091A13] border-[#C5A36A]/50 text-[#C5A36A] hover:border-[#C5A36A]'
+                  : 'bg-slate-900/80 border-cyan-500/30 text-cyan-400 hover:border-cyan-400'
+              }`}
+              title={`Switch to ${theme === 'cyber' ? 'Emerald & Gold' : 'Cyber Neon'} Theme`}
+            >
+              <Palette className="w-3.5 h-3.5" />
+              <span className="hidden lg:inline">{theme === 'emerald' ? 'Gold' : 'Cyber'}</span>
+            </button>
+
             {/* Quick Command Palette Button */}
             <button
               onClick={onOpenCommandPalette}
@@ -120,6 +151,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommandPalette, onOpenCV }
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              className={`p-2 rounded-lg border text-xs font-mono transition-all ${
+                theme === 'emerald'
+                  ? 'bg-[#091A13] border-[#C5A36A]/50 text-[#C5A36A]'
+                  : 'bg-slate-900 border-cyan-500/30 text-cyan-400'
+              }`}
+              title="Toggle Theme"
+            >
+              <Palette className="w-5 h-5" />
+            </button>
             <button
               onClick={onOpenCommandPalette}
               className="p-2 rounded-lg bg-slate-900 border border-slate-700 text-cyan-400"
@@ -154,6 +196,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommandPalette, onOpenCV }
           </div>
 
           <div className="pt-3 border-t border-slate-800 flex flex-col gap-2">
+            <button
+              onClick={toggleTheme}
+              className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-lg border text-xs font-mono transition-all ${
+                theme === 'emerald'
+                  ? 'bg-[#091A13] border-[#C5A36A]/50 text-[#C5A36A]'
+                  : 'bg-slate-900 border-cyan-500/30 text-cyan-400'
+              }`}
+            >
+              <Palette className="w-4 h-4" />
+              <span>Theme: {theme === 'emerald' ? 'Emerald & Champagne Gold' : 'Cyber Neon'}</span>
+            </button>
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
