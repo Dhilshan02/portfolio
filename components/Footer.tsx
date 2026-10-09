@@ -1,7 +1,7 @@
 import React from 'react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { Mail, ArrowUp } from 'lucide-react';
-import { GithubIcon, LinkedinIcon, FacebookIcon, InstagramIcon, TiktokIcon } from './Icons';
+import { GithubIcon, LinkedinIcon, FacebookIcon, InstagramIcon } from './Icons';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {

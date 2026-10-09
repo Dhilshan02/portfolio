@@ -2,6 +2,7 @@ import React from 'react';
 import { X, Download, Printer, FileText, Mail } from 'lucide-react';
 import { PERSONAL_INFO } from '../../data/portfolioData';
 import { GithubIcon, LinkedinIcon } from '../Icons';
+import { downloadCV } from '../../utils/generateCV';
 
 interface CVModalProps {
   isOpen: boolean;
@@ -12,64 +13,7 @@ export const CVModal: React.FC<CVModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   const handleDownload = () => {
-    const cvText = `
-DHILSHAN MOHAMED (DHILSHAN MOHAMED S.E.)
-Software Engineering Undergraduate (3rd Year, 2025–2028)
-NSBM Green University, Sri Lanka
-Email: ${PERSONAL_INFO.email}
-LinkedIn: ${PERSONAL_INFO.linkedin}
-GitHub: ${PERSONAL_INFO.github}
-
-==================================================
-SUMMARY
-==================================================
-Software Engineering Undergraduate seeking Software Engineering & Full-Stack Development Internship Opportunities. Passionate about building robust backend microservices with Java Spring Boot and ASP.NET Core 8, paired with high-performance React and TypeScript frontends.
-
-==================================================
-EDUCATION
-==================================================
-- BSc (Hons) Software Engineering (2025 - 2028)
-  NSBM Green University, Homagama, Sri Lanka
-  Key Modules: Enterprise Architecture, Web Development, Database Engineering, Software Design Patterns
-
-- International Diploma in Quantity Surveying, Level 4 (2026)
-  Metropolitan College (OTHM Qualifications), Sri Lanka
-  120 credits / 60 ECTS, PASS in all units (EQF Level 5)
-
-==================================================
-TECHNICAL SKILLS
-==================================================
-- Languages: Java, JavaScript, TypeScript, C#, SQL, HTML5, CSS3
-- Frontend: React 19, Vite, Tailwind CSS, Next.js, Bootstrap
-- Backend: Spring Boot, ASP.NET Core 8, REST APIs, Microservices, JPA/Hibernate
-- Databases: PostgreSQL, MySQL, SQL Server
-- Tools: Git, GitHub, Postman, Docker, Figma
-
-==================================================
-KEY PROJECTS
-==================================================
-1. Travel to Heaven (Full-Stack Travel Platform)
-   React, TypeScript, Spring Boot, PostgreSQL, JPA/Hibernate, Tailwind CSS
-
-2. RecruitSphere AI (AI Talent Platform)
-   React, TypeScript, ASP.NET Core 8, Candidate Scoring Algorithms
-
-3. Goodreads Mobile App Redesign (UI/UX Case Study)
-   Figma, HCI Research, Voice Search, Prototyping
-
-4. FindMyMeds (Pharmacy Inventory Finder)
-   React, Spring Boot, MySQL, Geolocation Search
-    `;
-
-    const blob = new Blob([cvText], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'Dhilshan_Mohamed_CV.txt';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    downloadCV();
   };
 
   const handlePrint = () => {

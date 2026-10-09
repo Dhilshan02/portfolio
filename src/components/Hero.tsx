@@ -1,13 +1,14 @@
 import React from 'react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { Play, ArrowDown, FileText, Sparkles, Terminal, Code2, ShieldCheck } from 'lucide-react';
+import { downloadCV } from '../utils/generateCV';
 
 interface HeroProps {
   onOpenCV: () => void;
   onOpenDemo: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onOpenCV, onOpenDemo }) => {
+export const Hero: React.FC<HeroProps> = ({ onOpenDemo }) => {
   return (
     <section id="home" className="relative min-h-screen pt-28 pb-16 flex items-center justify-center overflow-hidden bg-cyber-grid">
       {/* Ambient background glow orbs */}
@@ -131,7 +132,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCV, onOpenDemo }) => {
             {/* Action CTAs */}
             <div className="pt-2 flex flex-wrap justify-center gap-4 items-center">
               <button
-                onClick={onOpenCV}
+                onClick={downloadCV}
                 className="px-6 py-3.5 rounded-xl bg-linear-to-r from-cyan-500 via-teal-400 to-cyan-400 text-slate-950 font-bold text-sm font-mono uppercase tracking-wider hover:shadow-[0_0_30px_rgba(0,240,255,0.6)] hover:scale-[1.02] transition-all flex items-center gap-2"
               >
                 <FileText className="w-4 h-4" />

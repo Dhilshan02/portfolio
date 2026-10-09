@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { PERSONAL_INFO } from '../data/portfolioData';
-import { Mail, MapPin, Send, CheckCircle2, AlertCircle, Loader2, Camera } from 'lucide-react';
-import { GithubIcon, LinkedinIcon, FacebookIcon, InstagramIcon, TiktokIcon } from './Icons';
+import { Mail, Send, CheckCircle2, AlertCircle, Loader2, Camera } from 'lucide-react';
+import { GithubIcon, LinkedinIcon, FacebookIcon, InstagramIcon } from './Icons';
 
 export const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
