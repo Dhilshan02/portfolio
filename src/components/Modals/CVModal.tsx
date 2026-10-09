@@ -145,11 +145,11 @@ KEY PROJECTS
               </div>
               <div className="flex items-center gap-2">
                 <LinkedinIcon className="w-3.5 h-3.5 text-cyan-400" />
-                <span>linkedin.com/in/dhilshan-mohamed</span>
+                <span>dhilshan-mohamed</span>
               </div>
               <div className="flex items-center gap-2">
                 <GithubIcon className="w-3.5 h-3.5 text-cyan-400" />
-                <span>github.com/dhilshan-mohamed</span>
+                <span>github.com/Dhilshan02</span>
               </div>
             </div>
           </div>

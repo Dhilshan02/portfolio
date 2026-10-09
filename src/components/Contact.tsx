@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { PERSONAL_INFO } from '../data/portfolioData';
-import { Mail, MapPin, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './Icons';
+import { Mail, MapPin, Send, CheckCircle2, AlertCircle, Loader2, Camera } from 'lucide-react';
+import { GithubIcon, LinkedinIcon, FacebookIcon, InstagramIcon, TiktokIcon } from './Icons';
 
 export const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -53,17 +53,45 @@ export const Contact: React.FC = () => {
     },
     {
       title: "LinkedIn Profile",
-      value: "linkedin.com/in/dhilshan-mohamed",
+      value: "dhilshan-mohamed",
       href: PERSONAL_INFO.linkedin,
       icon: LinkedinIcon,
       color: "text-blue-400 border-blue-500/30 bg-blue-950/60"
     },
     {
       title: "GitHub Repositories",
-      value: "github.com/dhilshan-mohamed",
+      value: "github.com/Dhilshan02",
       href: PERSONAL_INFO.github,
       icon: GithubIcon,
       color: "text-purple-400 border-purple-500/30 bg-purple-950/60"
+    },
+    {
+      title: "Facebook",
+      value: "dhilshan.mhd",
+      href: PERSONAL_INFO.facebook,
+      icon: FacebookIcon,
+      color: "text-blue-500 border-blue-500/30 bg-blue-950/60"
+    },
+    {
+      title: "Instagram",
+      value: "@dhilshan_mhd",
+      href: PERSONAL_INFO.instagram,
+      icon: InstagramIcon,
+      color: "text-pink-400 border-pink-500/30 bg-pink-950/60"
+    },
+    {
+      title: "TikTok",
+      value: "@mr.dhilshan_mhd",
+      href: PERSONAL_INFO.tiktok,
+      icon: TiktokIcon,
+      color: "text-teal-400 border-teal-500/30 bg-teal-950/60"
+    },
+    {
+      title: "Photo Studio",
+      value: PERSONAL_INFO.photoStudio,
+      href: PERSONAL_INFO.facebook,
+      icon: Camera,
+      color: "text-amber-400 border-amber-500/30 bg-amber-950/60"
     },
     {
       title: "Location",

@@ -1,7 +1,7 @@
 import React from 'react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { Mail, ArrowUp } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './Icons';
+import { GithubIcon, LinkedinIcon, FacebookIcon, InstagramIcon, TiktokIcon } from './Icons';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Social Icons */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 flex-wrap justify-center">
             <a
               href={`mailto:${PERSONAL_INFO.email}`}
               className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
@@ -55,9 +55,36 @@ export const Footer: React.FC = () => {
             >
               <GithubIcon className="w-4 h-4" />
             </a>
+            <a
+              href={PERSONAL_INFO.facebook}
+              target="_blank"
+              rel="noreferrer"
+              className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
+              title="Facebook"
+            >
+              <FacebookIcon className="w-4 h-4" />
+            </a>
+            <a
+              href={PERSONAL_INFO.instagram}
+              target="_blank"
+              rel="noreferrer"
+              className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
+              title="Instagram"
+            >
+              <InstagramIcon className="w-4 h-4" />
+            </a>
+            <a
+              href={PERSONAL_INFO.tiktok}
+              target="_blank"
+              rel="noreferrer"
+              className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
+              title="TikTok"
+            >
+              <TiktokIcon className="w-4 h-4" />
+            </a>
             <button
               onClick={scrollToTop}
-              className="p-2.5 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500 hover:text-slate-950 transition-all ml-2"
+              className="p-2.5 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500 hover:text-slate-950 transition-all ml-1"
               title="Scroll to top"
             >
               <ArrowUp className="w-4 h-4" />
