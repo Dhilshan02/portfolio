@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { Mail, Send, CheckCircle2, AlertCircle, Loader2, Camera } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, FacebookIcon, InstagramIcon } from './Icons';
@@ -36,11 +37,32 @@ export const Contact: React.FC = () => {
     setStatus('sending');
     setErrorMessage('');
 
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setTimeout(() => setStatus('idle'), 6000);
-    }, 1500);
+    // Send email using EmailJS
+    emailjs
+      .send(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS Service ID
+        'YOUR_TEMPLATE_ID', // Replace with your EmailJS Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_name: 'Dhilshan Mohamed', // Optional: your name
+        },
+        'YOUR_PUBLIC_KEY' // Replace with your EmailJS Public Key
+      )
+      .then(
+        () => {
+          setStatus('success');
+          setFormData({ name: '', email: '', subject: '', message: '' });
+          setTimeout(() => setStatus('idle'), 6000);
+        },
+        (error) => {
+          console.error('FAILED...', error);
+          setStatus('error');
+          setErrorMessage('Failed to send message. Please try again later.');
+        }
+      );
   };
 
   const contactLinks = [
@@ -180,7 +202,7 @@ export const Contact: React.FC = () => {
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5 text-white">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label className="block text-xs font-mono text-slate-300 uppercase tracking-wider mb-2">
@@ -192,7 +214,7 @@ export const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="e.g. Sarah Connor"
-                    className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-700 text-white placeholder-slate-500 text-sm font-sans focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-700 placeholder:text-slate-500 text-sm font-sans focus:outline-none focus:ring-1 focus:ring-cyan-400 transition-all"
                   />
                 </div>
 
@@ -206,7 +228,7 @@ export const Contact: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="e.g. sarah@techcorp.com"
-                    className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-700 text-white placeholder-slate-500 text-sm font-sans focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-700 placeholder:text-slate-500 text-sm font-sans focus:outline-none focus:ring-1 focus:ring-cyan-400 transition-all"
                   />
                 </div>
               </div>
@@ -221,7 +243,7 @@ export const Contact: React.FC = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   placeholder="e.g. Software Engineering Internship Inquiry"
-                  className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-700 text-white placeholder-slate-500 text-sm font-sans focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all"
+                  className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-700 placeholder:text-slate-500 text-sm font-sans focus:outline-none focus:ring-1 focus:ring-cyan-400 transition-all"
                 />
               </div>
 
@@ -235,7 +257,7 @@ export const Contact: React.FC = () => {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Write your message here..."
-                  className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-700 text-white placeholder-slate-500 text-sm font-sans focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-700 placeholder:text-slate-500 text-sm font-sans focus:outline-none focus:ring-1 focus:ring-cyan-400 transition-all resize-none"
                 />
               </div>
 
