@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
+import { sendContactEmail } from '../services/emailjs';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { Mail, Send, CheckCircle2, AlertCircle, Loader2, Camera } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, FacebookIcon, InstagramIcon } from './Icons';
@@ -37,20 +37,7 @@ export const Contact: React.FC = () => {
     setStatus('sending');
     setErrorMessage('');
 
-    // Send email using EmailJS
-    emailjs
-      .send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS Service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS Template ID
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          to_name: 'Dhilshan Mohamed', // Optional: your name
-        },
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS Public Key
-      )
+    sendContactEmail(formData)
       .then(
         () => {
           setStatus('success');
@@ -58,7 +45,7 @@ export const Contact: React.FC = () => {
           setTimeout(() => setStatus('idle'), 6000);
         },
         (error) => {
-          console.error('FAILED...', error);
+          console.error('EmailJS Error:', error);
           setStatus('error');
           setErrorMessage('Failed to send message. Please try again later.');
         }
